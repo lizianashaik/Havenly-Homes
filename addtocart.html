@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart - Havenly Homes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<!--End of links for font-->
+<!--Link for icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+#cart-items {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+#cart-summary {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: right;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+}
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.wishlist-item-image {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.wishlist-item-details p {
+    margin: 5px 0;
+}
+</style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <br>
+   <div>
+    <main>
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+        <div id="cart-summary">
+            <p>Total: <span id="total-price">$0.00</span></p>
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </main>
+    </div>
+    
+    <div id="cart-items"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Display items from localStorage in the Cart
+        displayItems('cartItems', 'cart-items');
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylessample3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="features">
+        <div class="feat-cont">
+            <div class="feat">
+                <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBpY3R1cmUlMjBzaG93aW5nJTIwaGlnaCUyMHF1YWxpdHl8ZW58MHx8MHx8fDA%3D">
+                <h3>Sustainability and Care</h3>
+               <p>Our products are crafted with the finest materials, ensuring durability and timeless style. </p> 
+            </div>
+            <div class="feat">
+                <img src="https://plus.unsplash.com/premium_photo-1681487855134-d6c0434f91f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZSUyMGRlbGl2ZXJ5fGVufDB8fDB8fHww">
+                <h3>Enjoy Free Delivery on All Orders!</h3>
+                <p>Enjoy free delivery on all orders, making your shopping experience even more convenient. </p>
+            </div>
+            <div class="feat">
+                <img src="https://media.istockphoto.com/id/1399550888/photo/businessman-typing-on-a-computer-keyboard-customer-service-satisfaction-survey-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=76_eWWQWepoHP6wcJpR3d-3n1ukwuf12UyuuGrU_MtQ=">
+                <h3>Exceptional Service, Every Step of the Way</h3>
+                <p>Experience top-notch service with personalized support and a seamless shopping journey.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.feat');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        const slider = document.querySelector('.feat-cont');
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      setInterval(nextSlide, 3000);
+    });
+    </script>
+</body>
+</html>

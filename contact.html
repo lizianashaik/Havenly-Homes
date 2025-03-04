@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<title>Contact Us</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+            color: #666;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .contact-container {
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .contact-info h2 {
+            color: #69abda;
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 35px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info p small {
+            color: #999;
+        }
+        .contact-info .social-icons {
+            margin-top: 25px;
+            margin-left:20px;
+        }
+        .contact-info .social-icons a {
+            font-size: 25px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+                    
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #1b5ae3;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+        .fa-facebook {
+  background: #3B5998;
+  color: white;
+        }
+
+        .fa-twitter {
+             background: #55ACEE;
+             color: white;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #69abda;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #b39529;
+        }
+        .contact-form small {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <div class="contact-info">
+        <h2>Get in Touch with Us!</h2>
+        <p>Have questions or need assistance?<br>
+           Encountering issues during checkout?<br>
+           Or simply want to share your feedback?</p>
+        <p>We’re here to help! Whether you have inquiries, suggestions, or just want to say hello, don’t hesitate to reach out.</p>
+        <p><a style="color: #69abda;text-decoration: none;" href="tel:18001030054">📞 1800-1030054</a></p>
+        <p><a style="color: #69abda;text-decoration: none;" href="mailto:abc@gmail.com">✉️ abc@gmail.com</a></p>
+        <div class="social-icons">
+            <a href="#" class="fa fa-facebook" target="_blank"></a>
+            <a href="#" class="fa fa-twitter" target="_blank"></a>
+            <a href="#" class="fa fa-instagram" target="_blank"></a>
+            <a href="#" class="fa fa-pinterest" target="_blank"></a>
+            <a href="#" class="fa fa-youtube" target="_blank"></a>
+        </div>
+    </div>
+    <div class="contact-form">
+        <form action="your_form_submission_endpoint" method="post">
+            <input type="text" name="name" placeholder="Name *" required>
+            <input type="tel" name="phone" placeholder="Phone *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+            <textarea name="message" rows="4" placeholder="Message *" required></textarea>
+            <input type="submit" value="Send Message">
+            <small>* By submitting our web form, you agree to receive promotional calls on the number shared </small>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

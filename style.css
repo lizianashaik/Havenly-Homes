@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color:rgb(234, 234, 195);
+    box-shadow: 20px 35px 30px rgb(0, 0, 0);
+    backdrop-filter: blur(3px);
+}
+
+body {
+    /*background-image: url('img4.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: large;
+    color:  transparent;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 40px 15px 15px;
+    border-radius: 40px;
+    border: solid 2px #ddd;
+    font-size: large;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border-color:rgb(77, 75, 75);
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+button {
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 17px;
+    color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    width:50%;
+    margin-left: 70px;
+} 
+
+button:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+input::placeholder {
+    color: black; /* Change this to your desired color */
+    opacity: 1;  /* Make it fully opaque, default is around 0.5 */
+}

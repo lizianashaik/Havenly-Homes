@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: url('background.jpg') no-repeat center left;
+    background-size: cover;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: none; /* Optional if using background CSS property */
+}
+
+.overlay-image {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    z-index: 2;
+}
+
+.text-overlay {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a5b3b;
+    text-align: left;
+}
+
+.text-overlay h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 18px;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img4.jpg" alt="Background" class="background-image">
+        <img src="mainpic.jpeg" alt="Overlayed Image" class="overlay-image">
+        <div class="text-overlay">
+            <h1>Trays</h1>
+            <p>Beauty Of Art Meets Flawless Functionality</p>
+        </div>
+    </div>
+    
+</body>
+</html>

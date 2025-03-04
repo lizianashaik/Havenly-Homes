@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DecoHome Sign In</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    background-color:#bfbaba;
+    box-shadow: 20px 35px 30px rgb(0, 0, 0);
+    backdrop-filter: blur(3px);
+}
+
+body {
+    /*background-image: url('img4.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    background-color: #EAEAEA;
+    justify-content: center;
+    align-items: center;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: large;
+    color:  transparent;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 40px 15px 15px;
+    border-radius: 40px;
+    border: solid 2px #ddd;
+    font-size: large;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border-color:rgb(77, 75, 75);
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+button {
+    height: 35px;
+    background-color: #ffffff;
+    font-size: 17px;
+    color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    width:50%;
+    margin-left: 70px;
+} 
+
+button:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+input::placeholder {
+    color: black; /* Change this to your desired color */
+    opacity: 1;  /* Make it fully opaque, default is around 0.5 */
+}
+
+    </style>
+    <script>
+        function validForm() {
+            var email = document.forms["signform"]["emailaddress"].value.trim();
+            var password = document.forms["signform"]["password"].value.trim();
+            var isValid = true;
+
+            // Clear previous errors
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+
+            // Email validation
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML = "Valid Email Address is required.";
+                isValid = false;
+            }
+
+            // Password validation
+            var passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (!passPattern.test(password)) {
+                document.getElementById("passwordError").innerHTML = "Password doesn't meet requirements.";
+                isValid = false;
+            }
+
+            // Show success message if form is valid
+            if (isValid) {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("signform").reset(); // Clear form fields
+            }
+            return false; // Prevent actual form submission
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="signform" name="signform" onsubmit="return validForm()">
+            <h1>Sign In</h1>
+
+            <div class="input-container">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="emailaddress" placeholder="Email Address" required>
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <button type="submit">Sign In</button><br><br>
+            <p style="text-align: center;">Don't have an account? <a href="signupDeco.html">Sign Up</a></p>
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 20px; font-size: x-large;">
+            Login Successful
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
