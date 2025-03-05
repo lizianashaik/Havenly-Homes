@@ -30,7 +30,7 @@ Havenly_Homes/
 ## 🚀 How to Run the Project
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/Havenly-Homes.git
+   git clone https://github.com/lizianashaik/Havenly-Homes.git
    ```
 2. Navigate to the project folder:
    ```sh
